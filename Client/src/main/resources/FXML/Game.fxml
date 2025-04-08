@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Polygon?>
+<Pane xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="MyController"
+      fx:id="root3"
+      style="-fx-alignment: center;"
+      prefHeight="655.0" prefWidth="900.0">
+
+<!--    <Button text="Back to Bet Screen"-->
+<!--            layoutX="400"-->
+<!--            layoutY="500"-->
+<!--            onAction="#handleBackToBetButton" />-->
+
+    <Polygon layoutX="315" layoutY="45" fill="LIGHTGRAY" points="0.0,0.0,270.0,0.0,270.0,122.0,0.0,122.0" />
+
+    <Polygon layoutX="45" layoutY="445" fill="LIGHTGRAY" points="0.0,0.0,270.0,0.0,270.0,122.0,0.0,122.0" />
+
+    <Polygon layoutX="585" layoutY="445" fill="LIGHTGRAY" points="0.0,0.0,270.0,0.0,270.0,122.0,0.0,122.0" />
+
+
+    <!-- Diamond Ante 1 -->
+    <StackPane layoutX="85" layoutY="330">
+        <Polygon fill="LIGHTBLUE" stroke="BLACK" points="50.0,0.0,100.0,50.0,50.0,100.0,0.0,50.0" />
+        <Text fx:id="textAnte1_Game" style="-fx-font-size: 20;" />
+    </StackPane>
+
+    <!-- Diamond Play Bet 1 -->
+    <StackPane layoutX="205" layoutY="330">
+        <Polygon fill="LIGHTBLUE" stroke="BLACK" points="50.0,0.0,100.0,50.0,50.0,100.0,0.0,50.0" />
+        <Text fx:id="textPlayBet1_Game" style="-fx-font-size: 20;" />
+    </StackPane>
+
+    <!-- Pair Plus 1 Circle -->
+    <StackPane layoutX="95" layoutY="240">
+        <Circle radius="40" fill="LIGHTGREEN" stroke="BLACK" />
+        <Text fx:id="textPairPlus1_Game" style="-fx-font-size: 20;" />
+    </StackPane>
+
+    <!-- Diamond Ante 2 -->
+    <StackPane layoutX="715" layoutY="330">
+        <Polygon fill="LIGHTBLUE" stroke="BLACK" points="50.0,0.0,100.0,50.0,50.0,100.0,0.0,50.0" />
+        <Text fx:id="textAnte2_Game" style="-fx-font-size: 20;" />
+    </StackPane>
+
+    <!-- Diamond Play Bet 2 -->
+    <StackPane layoutX="595" layoutY="330">
+        <Polygon fill="LIGHTBLUE" stroke="BLACK" points="50.0,0.0,100.0,50.0,50.0,100.0,0.0,50.0" />
+        <Text fx:id="textPlayBet2_Game" style="-fx-font-size: 20;" />
+    </StackPane>
+
+    <!-- Pair Plus 2 Circle -->
+    <StackPane layoutX="725" layoutY="240">
+        <Circle radius="40" fill="LIGHTGREEN" stroke="BLACK" />
+        <Text fx:id="textPairPlus2_Game" style="-fx-font-size: 20;" />
+    </StackPane>
+
+    <HBox fx:id="hand1Box_Game" spacing="10" layoutX="50" layoutY="450"/>
+    <HBox fx:id="hand2Box_Game" spacing="10" layoutX="590" layoutY="450"/>
+    <HBox fx:id="hand1BackBox_Game" spacing="10" layoutX="50" layoutY="450"/>
+    <HBox fx:id="hand2BackBox_Game" spacing="10" layoutX="590" layoutY="450"/>
+
+    <HBox fx:id="dealerHandBox_Game" spacing="10" layoutX="320" layoutY="50"/>
+    <HBox fx:id="dealerBackBox_Game" spacing="10" layoutX="320" layoutY="50"/>
+
+    <Button fx:id="buttonPlay1_Game" text="Play" layoutX="320" layoutY="450" onAction="#handleButtonPlay1" disable="true"/>
+    <Button fx:id="buttonPlay2_Game" text="Play" layoutX="540" layoutY="450" onAction="#handleButtonPlay2" disable="true"/>
+    <Button fx:id="buttonFold1_Game" text="Fold" layoutX="320" layoutY="537" onAction="#handleButtonFold1" disable="true"/>
+    <Button fx:id="buttonFold2_Game" text="Fold" layoutX="540" layoutY="537" onAction="#handleButtonFold2" disable="true"/>
+
+    <Button fx:id="nextButton_Game" text="Next" layoutX="455" layoutY="300" prefWidth="70" onAction="#handleNextButton_Game" disable="true" visible="false"/>
+    <Button fx:id="restartButton_Game" text="Restart" layoutX="385" layoutY="300" prefWidth="70" onAction="#handleRestartButton_Game" disable="true" visible="false"/>
+
+    <Label fx:id="win1Label" text="Current Winnings" style="-fx-font-size: 17; -fx-text-fill: white;" layoutX="50" layoutY="572"/>
+    <TextField fx:id="textFieldWinAmount1_Game" style="-fx-font-size: 20;" prefWidth="130" layoutX="180" layoutY="572" editable="false"/>
+    <Label fx:id="player1Label" text="PLAYER 1" style="-fx-font-size: 20; -fx-text-fill: white" layoutX="140" layoutY="622"/>
+
+    <Label fx:id="win2Label" text="Current Winnings" style="-fx-font-size: 17; -fx-text-fill: white;" layoutX="590" layoutY="572"/>
+    <TextField fx:id="textFieldWinAmount2_Game" style="-fx-font-size: 20;" prefWidth="130" layoutX="720" layoutY="572" editable="false"/>
+    <Label fx:id="player2Label" text="PLAYER 2" style="-fx-font-size: 20; -fx-text-fill: white" layoutX="680" layoutY="622"/>
+
+    <Label fx:id="dealerLabel" text="DEALER" style="-fx-font-size: 20; -fx-text-fill: white" layoutX="415" layoutY="20"/>
+
+    <TextArea fx:id="textAreaHistory_Game"
+              layoutX="600"
+              layoutY="30"
+              prefWidth="290"
+              editable="false"
+              wrapText="true"
+              style="-fx-background-color: yellow;"/>
+
+    <MenuBar fx:id="menuBar" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+        <menus>
+            <Menu text="Options">
+                <items>
+                    <MenuItem text="Exit" fx:id="exitMenuItem_Game" onAction="#callExit_Game"/>
+                    <MenuItem text="Fresh Start" fx:id="freshStartMenuItem_Game" onAction="#handleRestartButton_Game"/>
+                    <Menu text="New Look">
+                        <items>
+                            <MenuItem text="Default Look" fx:id="guiDefault" onAction="#handleDefaultLook"/>
+                            <MenuItem text="Look 1" fx:id="gui1" onAction="#handleLook1"/>
+                            <MenuItem text="Look 2" fx:id="gui2" onAction="#handleLook2"/>
+                        </items>
+                    </Menu>
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+
+</Pane>

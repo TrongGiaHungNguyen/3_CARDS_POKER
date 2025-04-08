@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="MyController"
+            fx:id="root1"
+            prefHeight="655" prefWidth="900">
+
+    <Label fx:id="label" text="3 CARDS POKER SERVER" alignment="CENTER" prefWidth="600" layoutX="150" layoutY="200"/>
+    <TextField fx:id="textFieldPort" promptText="Enter a port number. Ex: 5555" text="5555" prefWidth="300" layoutX="300" layoutY="300" />
+    <Button fx:id="startButton" text="START" prefWidth="120"  layoutX="390" layoutY="350" onAction="#startServer_Button"/>
+
+</Pane>

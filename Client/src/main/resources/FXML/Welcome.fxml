@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--<Pane xmlns="http://javafx.com/javafx"-->
+<!--            xmlns:fx="http://javafx.com/fxml"-->
+<!--            fx:controller="MyController"-->
+<!--            prefHeight="400.0" prefWidth="600.0">-->
+<!--    -->
+<!--</Pane>-->
+
+<?import javafx.scene.text.Text?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="MyController"
+      style="-fx-alignment: center; -fx-padding: 20;"
+      spacing="20"
+      fx:id="root">
+
+    <Label fx:id="welcomeLabel"
+           text = "WELCOME TO THE THREE CARD POKER!"
+           style = "-fx-font-size: 40; -fx-text-fill: white"
+    />
+
+    <HBox style="-fx-alignment: center; -fx-padding: 50; -fx-spacing: 50">
+        <TextField fx:id="textField_Port" promptText="Enter port number" text="5555"/>
+        <TextField fx:id="textField_IP" promptText="Enter IP address" text="127.0.0.1"/>
+    </HBox>
+
+    <Button fx:id="connectButton"
+            text = "CONNECT"
+            prefHeight="30.0" prefWidth="100.0"
+            onAction="#callBet"
+    />
+
+    <Button fx:id="testButton"
+            text = "EXIT"
+            prefHeight="30.0" prefWidth="100.0"
+    />
+</VBox>

@@ -1,0 +1,11 @@
+EvalGame.class
+Deck.class
+ThreeCardLogic.class
+Player.class
+PokerInfo.class
+ClientRunnable.class
+JavaFXTemplate.class
+Server.class
+Card.class
+MyController.class
+Dealer.class

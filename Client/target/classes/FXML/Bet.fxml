@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="MyController"
+      prefHeight="600.0" prefWidth="900.0"
+      fx:id="root2">
+
+    <Label fx:id="betLabel1"
+           text = "PLAYER 1'S BETS"
+           style = "-fx-font-size: 30; -fx-text-fill: white; -fx-font-weight: bold;"
+           layoutX="120"
+           layoutY="100"
+    />
+
+    <Label fx:id="betLabel2"
+           text = "PLAYER 2'S BETS"
+           style = "-fx-font-size: 30; -fx-text-fill: white; -fx-font-weight: bold;"
+           layoutX="550"
+           layoutY="100"
+    />
+
+    <Label fx:id="labelAnte1"
+           text = "Ante Wager"
+           style = "-fx-font-size: 15; -fx-text-fill: white;"
+           layoutX="195"
+           layoutY="150"
+    />
+
+    <Label fx:id="labelAnte2"
+           text = "Ante Wager"
+           style = "-fx-font-size: 15; -fx-text-fill: white;"
+           layoutX="625"
+           layoutY="150"
+    />
+
+    <Label fx:id="labelPairPlus1"
+           text = "Pair Plus (optional)"
+           style = "-fx-font-size: 15; -fx-text-fill: white;"
+           layoutX="172"
+           layoutY="270"
+    />
+
+    <Label fx:id="labelPairPlus2"
+           text = "Pair Plus (optional)"
+           style = "-fx-font-size: 15; -fx-text-fill: white;"
+           layoutX="602"
+           layoutY="270"
+    />
+
+    <TextField fx:id="anteTextField1_Bet"
+               promptText = "Ex: 5, 12, 23, etc."
+               layoutX="150" layoutY="180"
+               prefHeight="50"
+    />
+
+    <TextField fx:id="anteTextField2_Bet"
+               promptText = "Ex: 5, 12, 23, etc."
+               layoutX="580" layoutY="180"
+               prefHeight="50"
+    />
+
+    <TextField fx:id="pairPlusTextField1_Bet"
+               promptText = "Ex: 5, 12, 23, etc."
+               layoutX="150" layoutY="300"
+               prefHeight="50"
+               text = "0"
+    />
+
+    <TextField fx:id="pairPlusTextField2_Bet"
+               promptText = "Ex: 5, 12, 23, etc."
+               layoutX="580" layoutY="300"
+               prefHeight="50"
+               text = "0"
+    />
+
+    <Button fx:id="doneButton_Bet"
+            text="Done"
+            style="-fx-font-size: 25;"
+            layoutX="400"
+            layoutY="400"
+            onAction="#handleDoneButton_Bet"
+    />
+
+    <Label fx:id="noteLabel_Bet"
+           text = "*All bet amounts must be between $5 and $25."
+           style = "-fx-font-size: 15; -fx-text-fill: yellow;"
+           layoutX="300"
+           layoutY="560"
+    />
+
+<!--    <MenuBar fx:id="menuBar" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">-->
+<!--        <menus>-->
+<!--            <Menu text="Options">-->
+<!--                <items>-->
+<!--                    <MenuItem text="Exit" fx:id="exitMenuItem_Game" onAction="#callExit_Game"/>-->
+<!--                    <MenuItem text="Fresh Start" fx:id="freshStartMenuItem_Game" onAction="#handleRestartButton_Game"/>-->
+<!--                    <Menu text="New Look">-->
+<!--                        <items>-->
+<!--                            <MenuItem text="Default Look" fx:id="guiDefault" onAction="#handleDefaultLook"/>-->
+<!--                            <MenuItem text="Look 1" fx:id="gui1" onAction="#handleLook1"/>-->
+<!--                            <MenuItem text="Look 2" fx:id="gui2" onAction="#handleLook2"/>-->
+<!--                        </items>-->
+<!--                    </Menu>-->
+<!--                </items>-->
+<!--            </Menu>-->
+<!--        </menus>-->
+<!--    </MenuBar>-->
+
+</Pane>
